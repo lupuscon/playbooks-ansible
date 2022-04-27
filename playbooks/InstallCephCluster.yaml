@@ -1,0 +1,11 @@
+---
+- name: Install CEPH Cluster
+  hosts: ceph-hosts
+  remote_user: ansibledeploy
+
+  task:
+  - name: Ensure OS are up-to-date
+    ansible.builtin.apt:
+      upgrade: dist
+      update_cache: yes
+
